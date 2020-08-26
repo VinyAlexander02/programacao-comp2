@@ -45,7 +45,13 @@ function requisito2(vet) { // Vet aponta para o Vetor
             qtde++
         }
     }
-    console.log(`A média de idades é ${soma / qtde}`)
+    if (qtde != 0){
+        console.log(`A média de idades é ${soma / qtde}`)
+
+    }else {
+        console.log(`Não existe habitante nesse calcúlo`)
+    }
+    
 }
 
 function requisito3(vet) {
