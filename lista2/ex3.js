@@ -25,12 +25,19 @@ function chefe() {
     
 }
 
-function requisito1(vet) {
-
+function requisito1(vet) { // Vet aponta para o Vetor 
+    var objeto = new Object()
+    objeto.sexo = prompt(`Informe o sexo M ou F`).toUpperCase
+    objeto.altura = Number(prompt("Informe a altura"))
+    objeto.idade = Number(prompt("Informe a idade"))
+    objeto.olhos = prompt("Informe a cor dos olhos A - Azul, V - verde e C - Castanho")
+    //Inserindo no vetor
+    vet.push(objeto)
+    console.log(`Habitante cadastrado com sucesso!`)
 }
 
-function requisito2(vet) {
-
+function requisito2(vet) { // Vet aponta para o Vetor 
+    
 }
 
 function requisito3(vet) {
