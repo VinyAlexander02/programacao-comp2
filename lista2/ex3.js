@@ -30,14 +30,22 @@ function requisito1(vet) { // Vet aponta para o Vetor
     objeto.sexo = prompt(`Informe o sexo M ou F`).toUpperCase
     objeto.altura = Number(prompt("Informe a altura"))
     objeto.idade = Number(prompt("Informe a idade"))
-    objeto.olhos = prompt("Informe a cor dos olhos A - Azul, V - verde e C - Castanho")
+    objeto.olhos = prompt("Informe a cor dos olhos A - Azul, V - verde e C - Castanho").toUpperCase
     //Inserindo no vetor
     vet.push(objeto)
     console.log(`Habitante cadastrado com sucesso!`)
 }
 
 function requisito2(vet) { // Vet aponta para o Vetor 
-    
+    var soma = 0
+    var qtde = 0
+    for (var i = 0; i < vet.length; i++) {
+        if((vet[i].olhos == "C") && (altura > 1.60)) {
+            soma = soma + vet[i].idade
+            qtde++
+        }
+    }
+    console.log(`A média de idades é ${soma / qtde}`)
 }
 
 function requisito3(vet) {
