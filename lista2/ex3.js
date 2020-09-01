@@ -65,7 +65,7 @@ function requisito3(vet) {
 function requisito4(vet) {
     var cont = 0
     for (var i = 0; i < vet.length; i++) {
-        if((vet[i].sexo == 'F') && (vet[i].idade > 19) && (vet[i].idade < 46) || (vet[i].olhos == "V") && (vet[i].altura < 1.70)){
+        if((vet[i].sexo == 'F') && ((vet[i].idade > 19) && (vet[i].idade < 46)) || ((vet[i].olhos == "V") && (vet[i].altura < 1.70))){
             cont++
         }
     }
