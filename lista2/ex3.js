@@ -75,11 +75,11 @@ function requisito4(vet) {
 function requisito5(vet) {
     var perc = 0
     for(var i = 0; I < vet.length; i++) {
-        if(vet[i].sexo == "M") {
-            perc = vet[i].sexo / 100
+        if(vet[i].sexo == "M"){
+            perc 
         }
     }
-    console.log(`O percentual de homens é de ${perc}`)
+    console.log(`O percentual de homens é de ${perc/vet.length*100}`)
 }
 
 chefe() 
