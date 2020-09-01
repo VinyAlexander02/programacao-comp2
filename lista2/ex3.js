@@ -1,5 +1,3 @@
-chefe() 
-
 function chefe() {
     var vetor = [] // Escopo global - Iremos passar nos parâmetros da função
 
@@ -55,13 +53,33 @@ function requisito2(vet) { // Vet aponta para o Vetor
 }
 
 function requisito3(vet) {
-
+    var maior = vet[0].idade
+    for(var i = 1; i < vet.length; i++) {
+        if (vet[i].idade > maior) {
+            maior = vet[i].idade
+        }
+    }
+    console.log(`A maior idade entre os habitantes é de ${maior}`)
 }
 
 function requisito4(vet) {
-
+    var cont = 0
+    for (var i = 0; i < vet.length; i++) {
+        if((vet[i].sexo == 'F') && (vet[i].idade > 19) && (vet[i].idade < 46) || (vet[i].olhos == "V") && (vet[i].altura < 1.70)){
+            cont++
+        }
+    }
+    console.log(`A quantidade de pessoas é de ${cont}`)
 }
 
 function requisito5(vet) {
-
+    var perc = 0
+    for(var i = 0; I < vet.length; i++) {
+        if(vet[i].sexo == "M") {
+            perc = vet[i].sexo / 100
+        }
+    }
+    console.log(`O percentual de homens é de ${perc}`)
 }
+
+chefe() 
