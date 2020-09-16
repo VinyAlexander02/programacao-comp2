@@ -16,14 +16,15 @@ function chefe() {
                break
             case 5: consultaMaiorVendedor(vendas)
                break
-            case 6: fazer
+            case 6: consultaMesMaisVendas(vendas)
+               break
             case 7: console.log(`Saindo....`)
         }
     }
-    while (opcao != 3)
+    while (opcao != 7)
 }
 
-function cadastraVenderdor(vendor){ // Escopo local - orvendor faz referência a vendedor 
+function cadastraVenderdor(vendor){ // Escopo local - vendor faz referência a vendedor 
     let objeto = new Object()
     objeto.cod = Number(prompt(`Informe o código`))
     objeto.nome = prompt(`Informe o nome`)
@@ -105,5 +106,22 @@ function consultaMaiorVendedor(ven) {
         }
     }
     console.log(`A maior venda é de ${maiorVenda} feita pelo vendedor ${codVendedor}`)
+}
+
+function consultaMesMaisVendas(ven) {
+    let meses = [0,0,0,0,0,0,0,0,0,0,0,0]
+    for(let i = 0; i < ven.length; i++) {
+        let posicao = ven[i].mes
+        meses[posicao] = meses[posicao] + ven[i].valor
+    }
+
+    let maiorValor = meses[0]
+    for(let i = 1; i < ven.length; i++) {
+        if(ven[i].valor > maiorValor) {
+            maiorValor = ven[i].valor
+        }
+    }
+    let posicao = ven.indexOF(maiorValor)
+    console.log(`Mês com mais vendas ${posicao + 1} e o valor é ${maiorValor}`)
 }
 
